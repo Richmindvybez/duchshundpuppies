@@ -64,10 +64,10 @@
     font-size: 28px;
   }
 
-  #testimonials .profiles{
+  /* #testimonials .profiles{
     gap: 2rem;
     flex-direction: column;
-  }
+  } */
 
   /* header nav .navlinks ul{
     display: none;
