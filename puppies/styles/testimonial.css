@@ -1,0 +1,100 @@
+
+
+.Morereviews{
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 8rem;
+}
+
+.Morereviews .describtion-c{
+  padding: 0 3rem;
+}
+
+.Morereviews .describtion-c h1{
+  margin-bottom: 1.5rem;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #0d786b;
+}
+
+.Morereviews .describtion-c a{
+  color: blue;
+  text-decoration: underline;
+}
+
+.c-reviews{
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c-reviews .block-div{
+  gap: 3rem;
+  padding: 1rem;
+  background-color: rgb(219, 215, 215);
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  width: 80%;
+  /* height: 250px; */
+}
+
+.c-reviews .block-div .image-only{
+  width: 300px;
+  /* height: 100%; */
+}
+
+.c-reviews .block-div .image-only img{
+  /* height: 100%; */
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 1px 1px 16px rgba(0, 0, 0, 0.15);
+}
+
+.c-reviews .block-div .txt-only{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 1rem;
+  width: 65%;
+}
+
+.c-reviews .block-div .txt-only h1{
+  color: #0d786b;
+}
+
+.c-reviews .block-div .txt-only h5 span{
+  font-size: 17px;
+  margin-right: .7rem;
+}
+.c-reviews .block-div .txt-only h5 i{
+  color: black;
+}
+.c-reviews .block-div .txt-only i{
+  color: red;
+}
+/* ====screenshoots=============================== */
+
+.screenshoots{
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  background-color: rgba(9, 142, 118, .10);
+  padding: 1rem;
+}
+.screenshoots .row{
+  gap: 2rem;
+  min-height: 100vh;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+  .screenshoots .row .boxes{
+    width: 300px;
+    
+  }
+  .screenshoots .row .boxes img{
+    width: 100%;
+  }
+
+
+  
