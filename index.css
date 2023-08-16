@@ -1,6 +1,6 @@
 
 
-@keyframes animate {
+/* @keyframes animate {
   0%,100%{
      background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(./images/background.jpg);
   }
@@ -16,7 +16,7 @@
   75%{
     background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(./images/background3.jpg);
  }
-}
+} */
 
 *{
    padding: 0;
@@ -162,16 +162,19 @@ header main{
   min-height: 85vh;
   width: 100%;
   margin-top: 5rem;
+  justify-content: center;
   /* background: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)); */
-  animation: animate 16s ease-in-out; 
+  /* animation: animate 16s ease-in-out; 
   animation-direction: alternate-reverse;
   animation-play-state: running;
   animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
 } 
 
 
 header .main-content{
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   color: #f3f0f0;
   text-align: center;
@@ -180,14 +183,77 @@ header .main-content{
   font-weight: 900;
   font-size: 20px;
   width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
+  min-height: 85vh;
+  /* background-position: center;
+  background-size: cover; */
+  position: relative;
+  background: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5));
 }
 
-header .main-content img{
-  object-fit: cover;
+.banner-img {
+	position: absolute;
+  left: 0;
+  /* right: 0; */
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	object-fit: cover;
+	object-position: center;
 }
+/* Gestion des points du carrousel */
+.dots {
+	position: absolute;
+	bottom: 40px;
+	display: flex;
+}
+
+.main-content .icons{
+  display: none;
+  justify-content: space-between;
+  position: absolute;
+  width: 80%;
+  padding: 0 1rem;
+  top: 50%;
+}
+.main-content .icons .icon-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 5px;
+  height: 50px;
+  width: 40px;
+}
+
+.main-content .icons .icon-div:hover{
+  cursor: pointer;
+  background-color: rgb(47, 34, 34);
+  transition: 2s;
+}
+.main-content .icons i{
+  color: white;
+  font-size: 24px;
+  transition: 0.6s ease;
+  font-weight: bold;
+  user-select: none;
+}
+
+.dot {
+	margin-inline: 5px;
+	width: 13px;
+	height: 13px;
+	background-color: #ffffff00;
+	border: 3px solid #fff;
+	border-radius: 100%;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+}
+.dot_selected {
+	background-color: #fff;
+}
+
+/* header .main-content img{
+  object-fit: cover;
+} */
 
 header .main-content span{
   color: #2ccdba;
