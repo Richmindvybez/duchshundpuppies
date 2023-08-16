@@ -52,11 +52,11 @@
 
   header .main-content{
     font-size: 10px;
-    min-height: 70vh;
+    min-height: 85vh;
   }
 
   header main{
-    min-height: 70vh;
+    min-height: 85vh;
     margin-top: 4rem;
   }
 
