@@ -1,34 +1,34 @@
 
-const slides = [
-  {
-    "image": "background.jpg"
-  },
-  {
-    "image": "backgound4.jpg"
-  },{
-    "image": "background1.jpg"
-  },{
-    "image": "background2.jpg"
-  },{
-    "image": "background3.jpg"
-  }
-]
-let maincontent = document.querySelector('.main-content');
-let dot_set = document.querySelector('.dots');
-let previous = document.querySelector('#previous');
-let nextbtn = document.querySelector('#next');
+// const slides = [
+//   {
+//     "image": "background.jpg"
+//   },
+//   {
+//     "image": "backgound4.jpg"
+//   },{
+//     "image": "background1.jpg"
+//   },{
+//     "image": "background2.jpg"
+//   },{
+//     "image": "background3.jpg"
+//   }
+// ]
+// let maincontent = document.querySelector('.main-content');
+// let dot_set = document.querySelector('.dots');
+// let previous = document.querySelector('#previous');
+// let nextbtn = document.querySelector('#next');
 
-previous.addEventListener('click', left);
-nextbtn.addEventListener('click', right);
+// previous.addEventListener('click', left);
+// nextbtn.addEventListener('click', right);
 
-let etape = 0;
-let slidelength = slides.length;
-let tabimages = [];
-let Timage = document.querySelector('.banner-img');
-// let text = document.querySelector('.banner-p');
-// console.log(text);
-tabimages = Object.values(slides);
-console.log(tabimages);
+// let etape = 0;
+// let slidelength = slides.length;
+// let tabimages = [];
+// let Timage = document.querySelector('.banner-img');
+// // let text = document.querySelector('.banner-p');
+// // console.log(text);
+// tabimages = Object.values(slides);
+// console.log(tabimages);
 
 // for( let e = 0; e < slidelength; e++){
 // 	let divs = document.createElement('div');
@@ -36,32 +36,32 @@ console.log(tabimages);
 // 	dot_set.appendChild(divs);
 // }
 
-let dot = document.getElementsByClassName('dot');
+// let dot = document.getElementsByClassName('dot');
 
-function left(){
+// function left(){
 	// dot[etape].classList.remove('dot_selected');
 	// e.preventDefault();
-	etape--;
-	if(etape < 0){
-		etape = slidelength - 1;
-	}
-	Timage.src = "../images/" + tabimages[etape].image;
-	// text.innerHTML = tabimages[etape].tagLine;
-	dot[etape].classList.add('dot_selected');
-}
+// 	etape--;
+// 	if(etape < 0){
+// 		etape = slidelength - 1;
+// 	}
+// 	Timage.src = "../images/" + tabimages[etape].image;
+// 	// text.innerHTML = tabimages[etape].tagLine;
+// 	dot[etape].classList.add('dot_selected');
+// }
 
-function right(){
-  // dot[etape].classList.remove('dot_selected');
-	etape++;
-	if( etape >= slidelength ){
-       etape = 0;
-	}
-	Timage.src = "../images/" + tabimages[etape].image;
+// function right(){
+//   dot[etape].classList.remove('dot_selected');
+// 	etape++;
+// 	if( etape >= slidelength ){
+//        etape = 0;
+// 	}
+// 	Timage.src = "../images/" + tabimages[etape].image;
 	// text.innerHTML = tabimages[etape].tagLine;
 	// dot[etape].classList.add('dot_selected');
-}
+// }
 
-setInterval(right, 5000);
+// setInterval(right, 5000);
 
 
 // testimonial script ==================================
