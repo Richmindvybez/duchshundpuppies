@@ -1,68 +1,4 @@
 
-// const slides = [
-//   {
-//     "image": "background.jpg"
-//   },
-//   {
-//     "image": "backgound4.jpg"
-//   },{
-//     "image": "background1.jpg"
-//   },{
-//     "image": "background2.jpg"
-//   },{
-//     "image": "background3.jpg"
-//   }
-// ]
-// let maincontent = document.querySelector('.main-content');
-// let dot_set = document.querySelector('.dots');
-// let previous = document.querySelector('#previous');
-// let nextbtn = document.querySelector('#next');
-
-// previous.addEventListener('click', left);
-// nextbtn.addEventListener('click', right);
-
-// let etape = 0;
-// let slidelength = slides.length;
-// let tabimages = [];
-// let Timage = document.querySelector('.banner-img');
-// // let text = document.querySelector('.banner-p');
-// // console.log(text);
-// tabimages = Object.values(slides);
-// console.log(tabimages);
-
-// for( let e = 0; e < slidelength; e++){
-// 	let divs = document.createElement('div');
-// 	divs.classList.add('dot');
-// 	dot_set.appendChild(divs);
-// }
-
-// let dot = document.getElementsByClassName('dot');
-
-// function left(){
-	// dot[etape].classList.remove('dot_selected');
-	// e.preventDefault();
-// 	etape--;
-// 	if(etape < 0){
-// 		etape = slidelength - 1;
-// 	}
-// 	Timage.src = "../images/" + tabimages[etape].image;
-// 	// text.innerHTML = tabimages[etape].tagLine;
-// 	dot[etape].classList.add('dot_selected');
-// }
-
-// function right(){
-//   dot[etape].classList.remove('dot_selected');
-// 	etape++;
-// 	if( etape >= slidelength ){
-//        etape = 0;
-// 	}
-// 	Timage.src = "../images/" + tabimages[etape].image;
-	// text.innerHTML = tabimages[etape].tagLine;
-	// dot[etape].classList.add('dot_selected');
-// }
-
-// setInterval(right, 5000);
-
 
 // testimonial script ==================================
 // let tablinks = document.getElementsByClassName('tab-imglink');
@@ -151,3 +87,27 @@ $(".profiles").owlCarousel({
     },
   }
 })
+
+
+// contact form
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'service_xxlf92z';
+   const templateID = 'template_ra4ript';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});

@@ -184,17 +184,24 @@
   
         </div>
   
-        <form action="">
+        <form id="form">
           <h2>Subscribe to our Email for updates</h2>
-          <input type="text" placeholder="Name...">
-          <input type="text" placeholder="Email...">
-          <input type="text" placeholder="Your message">
-          <button>Send message</button>
+          <input type="text" placeholder="Name..." id="from_name" name="from_name">
+          <input type="text" placeholder="Email..." id="email_id" name="email_id">
+          <textarea type="text" placeholder="Your message" id="message" name="message"></textarea>
+          <input type="submit" id="button" name="button" value="Send Message">
         </form>
       </div>
     </section>
   
 
+    <!-- script section ================================= -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+    emailjs.init('frItkEXc7CibqIxhO')
+  </script>
+<script src="./script/index.js"></script>
 </body>
 
 </html>
