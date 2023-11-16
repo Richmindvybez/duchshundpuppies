@@ -93,21 +93,21 @@ $(".profiles").owlCarousel({
 
 const btn = document.getElementById('button');
 
-document.getElementById('form')
- .addEventListener('submit', function(event) {
-   event.preventDefault();
+// document.getElementById('form')
+//  .addEventListener('submit', function(event) {
+//    event.preventDefault();
 
-   btn.value = 'Sending...';
+//    btn.value = 'Sending...';
 
-   const serviceID = 'service_xxlf92z';
-   const templateID = 'template_ra4ript';
+//    const serviceID = 'service_xxlf92z';
+//    const templateID = 'template_ra4ript';
 
-   emailjs.sendForm(serviceID, templateID, this)
-    .then(() => {
-      btn.value = 'Send Email';
-      // alert('Sent!');
-    }, (err) => {
-      btn.value = 'Send Email';
-      alert(JSON.stringify(err));
-    });
-});
+//    emailjs.sendForm(serviceID, templateID, this)
+//     .then(() => {
+//       btn.value = 'Send Email';
+//       // alert('Sent!');
+//     }, (err) => {
+//       btn.value = 'Send Email';
+//       alert(JSON.stringify(err));
+//     });
+// });
